@@ -23,6 +23,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
     rel="stylesheet">
+
+
+ <style>
+    /* Add CSS styles directly using the <style> tag */
+    .button-style {
+      text-align: center;
+
+      margin: 0;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    button:active {
+      background-color: #3e8e41;
+    }
+  </style>
+
+
+  
 </head>
 
 <body id="top">
@@ -189,6 +217,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </div>
       </section>
+
+
+
+
+
+      
+      <button onclick="redirectToThankYouPage()" class="button-style">Purchase Button</button>
+
+      <script>
+        function redirectToThankYouPage() {
+          // Default values to be added to the URL
+          const name = "Sunny";
+          const email = "sunny@example.com";
+          const message = "Thank you for visiting our website!";
+
+          // Create the URL with default values
+          const url = `thankyou.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`;
+
+          // Redirect the user to the thank you page
+          window.location.href = url;
+        }
+      </script>
+
 
 
 
